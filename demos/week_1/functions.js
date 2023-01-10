@@ -45,7 +45,7 @@ console.log(greeting); // Hello there John!
         Functions that don't have a name, but can be assigned to a variable, passed around
         as arguments, returned from other functions, etc.
         - Uses the function keyword
-    3. Arrow functions
+    3. Arrow functions (ES6)
         Functions that use a shorthand syntax for defining a function
         They utilize the => syntax
 
