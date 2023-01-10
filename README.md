@@ -21,7 +21,7 @@ This is the training repository for the Serverless NERD cohort starting on Janua
 > One-on-ones are similar to QC in many ways as both are verbal evaluations to see how well you understand the material. However, the difference is that one-on-ones are a way for the trainer to understand your performance, while QC is a "third-party" evaluation by the QC team to make sure you are progressing according to Revature standards
 
 ## Useful Links
-* [Github Cheat Sheet](https://i.redd.it/8341g68g1v7y.png)
+* [Git Cheat Sheet](https://i.redd.it/8341g68g1v7y.png)
 * [VSCode Website](https://code.visualstudio.com/)
 * [Node.js Website](https://nodejs.org/en/)
 * [Postman Website](https://www.postman.com/downloads/)
