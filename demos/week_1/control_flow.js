@@ -92,12 +92,14 @@ switch(z) {
 //  3. update: Executed at the end of each iteration of the loop. Used to update the counter variable
 
 // print out numbers 0 to 4
+// O(1), because 5 is a constant
 for (let i = 0; i < 5; i++) { // i++ -> i = i + 1
     console.log(i);
 }
 
 // A while loop does not have initialization or update sections like a for loop. A while loop only has a condition
 // As long as the condition is true, the while loop will continue running until the condition becomes false
+// O(1), because 5 is a constant
 let a = 0;
 while (a < 5) {
     console.log(a);
@@ -106,8 +108,19 @@ while (a < 5) {
 
 // A do-while loop is similar to a while loop, except a do-while loop always executes at least ONCE
 // because the condition is evaluated at the end, not at the beginning
+// O(1) because 5 is a constant
 let b = 6;
 do {
     console.log(b);
     b++;
 } while(b < 5);
+
+// O(n)
+function printNumbers(n) {
+    for (let i = 0; i < n; i++) {
+        console.log(i);
+    }
+}
+
+printNumbers(10); // 10 iterations
+printNumbers(100); // 100 iterations
