@@ -40,7 +40,7 @@ An algorithm for making a peanut butter and jelly sandwich:
 ```
 
 ### Efficiency of an algorithm
-How do we describe how fast/efficient an algorithm is? **Time and space complexity**
+How do we describe how fast and space efficient an algorithm is? **Time and space complexity**
 
 Time and space complexity are measures of a performance of an algorithm. Time complexity is a measure of how long an algorithm takes to run, based on the size of the input data. Space complexity is a measure of how much memory an algorithm uses, also based on the size of the input data.
 
