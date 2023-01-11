@@ -1,3 +1,20 @@
+/*
+    Objects are important in JavaScript because they allow you to model real-world entities as a collection of properties
+
+    Why objects?
+    1. They provide a way to organize and structure your code. By grouping related data and behavior together into a single
+        object, you can make your code more readable and reusable
+    2. They allow you to create reusable and modular code. We can define a blueprint for an object (either a "function 
+        constructor" or a "class") and then create multiple instances of that object, each with their own unique values
+    3. They enable encapsulation. We can use objects to encapsulate data and behavior, and hide the details of how the object
+        works from the "outside world". This makes it easier to change the implementation of an object without affecting the
+        rest of the code
+    4. They are used in many JS frameworks, libraries, and APIs. Understanding objects is important to utilize these tools
+        effectively
+    5. JS, which uses prototypal inheritance, objects can inherit properties and methods from other objects, which allows
+        us to create complex relationships and model more advanced concepts like inheritance and polymorphism
+*/
+
 // To create objects in JS, we do NOT need to use the "new" keyword necessarily, although you may encounter the
 // usage of that keyword
 
