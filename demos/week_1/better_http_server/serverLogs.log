@@ -1,0 +1,26 @@
+{"level":"info","message":"GET recevied to /","timestamp":"2023-01-12T20:01:49.429Z"}
+{"level":"info","message":"GET recevied to /person","timestamp":"2023-01-12T20:01:57.811Z"}
+{"level":"info","message":"GET recevied to /person/?name=Mike","timestamp":"2023-01-12T20:02:06.575Z"}
+{"level":"info","message":"Name Query successful: [object Object]","timestamp":"2023-01-12T20:02:06.575Z"}
+{"level":"info","message":"GET recevied to /person/?name=Mi","timestamp":"2023-01-12T20:02:09.961Z"}
+{"level":"info","message":"Invalid name query received : Mi","timestamp":"2023-01-12T20:02:09.961Z"}
+{"level":"info","message":"GET recevied to /person/?name=Mi","timestamp":"2023-01-12T20:03:00.725Z"}
+{"level":"info","message":"Invalid name query received : Mi","timestamp":"2023-01-12T20:03:00.726Z"}
+{"level":"info","message":"GET recevied to /person/?name=Mike","timestamp":"2023-01-12T20:21:43.403Z"}
+{"level":"info","message":"Name Query successful: [object Object]","timestamp":"2023-01-12T20:21:43.404Z"}
+{"level":"info","message":"GET recevied to /person/?name=Mike","timestamp":"2023-01-12T20:23:06.119Z"}
+{"level":"info","message":"Name Query successful: [object Object]","timestamp":"2023-01-12T20:23:06.120Z"}
+{"level":"info","message":"POST recevied to /person/?name=Mike","timestamp":"2023-01-12T20:23:14.893Z"}
+{"level":"info","message":"POST recevied to /person","timestamp":"2023-01-12T20:30:06.116Z"}
+{"level":"info","message":"GET recevied to /person/?name=Brian","timestamp":"2023-01-12T20:30:20.399Z"}
+{"level":"info","message":"Name Query successful: [object Object]","timestamp":"2023-01-12T20:30:20.400Z"}
+{"level":"info","message":"GET recevied to /person/?name=Brian","timestamp":"2023-01-12T20:30:39.515Z"}
+{"level":"info","message":"Invalid name query received : Brian","timestamp":"2023-01-12T20:30:39.516Z"}
+{"level":"info","message":"POST recevied to /person/","timestamp":"2023-01-12T20:34:53.409Z"}
+{"level":"info","message":"POST recevied to /person","timestamp":"2023-01-12T20:34:58.237Z"}
+{"level":"info","message":"POST recevied to /person","timestamp":"2023-01-12T20:35:13.654Z"}
+{"level":"info","message":"POST recevied to /person","timestamp":"2023-01-12T20:35:44.786Z"}
+{"level":"info","message":"GET recevied to /person/?name=Brian","timestamp":"2023-01-12T20:35:55.517Z"}
+{"level":"info","message":"Name Query successful: [object Object]","timestamp":"2023-01-12T20:35:55.518Z"}
+{"level":"info","message":"GET recevied to /person/?name=Brian","timestamp":"2023-01-12T20:36:00.321Z"}
+{"level":"info","message":"Name Query successful: [object Object]","timestamp":"2023-01-12T20:36:00.322Z"}
