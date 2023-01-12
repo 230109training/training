@@ -14,3 +14,7 @@ Please look up documentation on these methods if you are unfamiliar with how the
 11. Use the .indexOf() method to find the index of the number 7 in the array [1, 2, 3, 4, 5, 6, 7, 8, 9].
 12. Use the .includes() method to check if the string "kiwi" is present in the array ["apple", "banana", "orange"].
 13. Use the .includes() method to check if the number 5 is present in the array [1, 2, 3, 4, 6, 7, 8, 9].
+14. Create an array of numbers and use .map to create a new array that contains the square of each number.
+15. Create an array of strings and use .map to create a new array that contains the length of each string.
+16. Create an array of objects and use .filter to create a new array that contains only the objects that have a specific property with a certain value.
+17. Create an array of words and use .filter to create a new array that contains only the words that have more than a certain number of letters.
