@@ -7,6 +7,21 @@ The console-based Grocery Shopping Tracker is no more! Modern backend applicatio
 3. POST /grocery/save: save items to file
 4. POST /grocery/load: load items from file
 
+Hint: you can use the approach of segmenting the code into requestHandler, getHandler, postHandler, etc. Another approach would be doing simple if, else-if, else
+```javascript
+if (req.url === '/grocery' && req.method === 'POST') {
+
+} else if (req.url === '/grocery' && req.method === 'GET') {
+
+} else if (req.url === '/grocery/save' && req.method === 'POST') {
+
+} else if (req.url === '/grocery/load' && req.method === 'POST') {
+
+} else {
+    
+}
+```
+
 ## Endpoint Requirements
 
 **Endpoint 1: Adding a Grocery Item**
