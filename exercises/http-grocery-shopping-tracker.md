@@ -8,7 +8,9 @@ The console-based Grocery Shopping Tracker is no more! Modern backend applicatio
 4. POST /grocery/load: load items from file
 
 ## Endpoint Requirements
-Endpoint 1: Adding a Grocery Item
+
+**Endpoint 1: Adding a Grocery Item**
+---
 
 Request:
 - Request Method: POST
@@ -31,7 +33,8 @@ Response:
 
 ---
 
-Endpoint 2: Viewing All Items in the List
+**Endpoint 2: Viewing All Items in the List**
+---
 
 Request:
 - Request Method: GET
@@ -61,7 +64,8 @@ Response:
 
 ---
 
-Endpoint 3: Saving list to a file
+**Endpoint 3: Saving list to a file**
+---
 
 Request:
 - Request Method: POST
@@ -74,7 +78,8 @@ Response:
 
 ---
 
-Endpoint 4: Reading from a file to a list
+**Endpoint 4: Reading from a file to a list**
+---
 
 Request:
 - Request Method: GET
