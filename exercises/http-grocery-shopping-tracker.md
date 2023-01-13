@@ -97,7 +97,7 @@ Response:
 ---
 
 Request:
-- Request Method: GET
+- Request Method: POST
 - Endpoint URL: /grocery/load
 - Request Body: None
 
