@@ -1,0 +1,14 @@
+{
+  "name": "better_server",
+  "version": "1.0.0",
+  "description": "A better server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian a",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^3.8.2"
+  }
+}
