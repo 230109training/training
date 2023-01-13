@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const { validateGroceryItem } = require('./utilty/validation');
 
 const PORT = 8080;
 
@@ -18,9 +19,18 @@ const server = http.createServer((req, res) => {
         });
 
         req.on('end', () => {
-            groceries.push(JSON.parse(data));
-            res.writeHead(201); // 201 Created
-            res.end();
+            const groceryItem = JSON.parse(data);
+
+            if (validateGroceryItem(groceryItem)) {
+                groceries.push(groceryItem);
+                res.writeHead(201); // 201 Created
+                res.end(JSON.stringify(groceryItem));
+            } else {
+                res.writeHead(400); // 400 Bad Request
+                res.end(JSON.stringify({
+                    message: "Item being added was improperly formatted"
+                }));
+            }
         });
     } else if (req.method === 'GET' && req.url === '/grocery') {
         res.setHeader('Content-Type', 'application/json');

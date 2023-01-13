@@ -4,8 +4,11 @@
   "description": "This is a demo for the http grocery shopping tracker app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Bach T.",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }
