@@ -1,0 +1,11 @@
+{
+  "name": "http-grocery-shopping-tracker",
+  "version": "1.0.0",
+  "description": "This is a demo for the http grocery shopping tracker app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bach T.",
+  "license": "ISC"
+}
