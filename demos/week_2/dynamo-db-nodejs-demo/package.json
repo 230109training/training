@@ -1,0 +1,14 @@
+{
+  "name": "dynamo-db-nodejs-demo",
+  "version": "1.0.0",
+  "description": "Application to demonstrate connecting to DynamoDB through a Node.js app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bach T.",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1296.0"
+  }
+}
