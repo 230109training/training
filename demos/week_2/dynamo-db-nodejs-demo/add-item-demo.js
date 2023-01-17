@@ -31,12 +31,14 @@ const params = {
     TableName: 'grocery_items',
     Item: {
         grocery_item_id: 'abc125',
-        name: 't-bone steak',
+        name: 'pork chop',
         quantity: 100,
-        price: 12.75
+        price: 50
     }
 };
 
+// put() will fully replace an existing item with a given key
+// or add an item if it doesn't exist
 documentClient.put(params, (err) => {
     if(err) {
         console.log(err);

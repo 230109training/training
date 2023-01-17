@@ -30,7 +30,7 @@ const documentClient = new AWS.DynamoDB.DocumentClient(); // Document Client
 const params = {
     TableName: 'grocery_items',
     Key: {
-        grocery_item_id: "abc123"
+        grocery_item_id: "abc125"
     }
 };
 
@@ -38,8 +38,10 @@ documentClient.get(params, (err, data) => {
     if (err) {
         console.log(err);
     } else {
-        console.log("Successfully retrieved data");
-        console.log(data);
-        console.log(data.Item);
+        if (data.Item) {
+            console.log(data.Item);
+        } else {
+            console.log(`Item with id ${params.Key.grocery_item_id} was not found`);
+        }
     }
 });

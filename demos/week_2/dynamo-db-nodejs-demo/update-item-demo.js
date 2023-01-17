@@ -30,18 +30,16 @@ const documentClient = new AWS.DynamoDB.DocumentClient(); // Document Client
 const params = {
     TableName: 'grocery_items',
     Key: {
-        grocery_item_id: "abc123"
+        grocery_item_id: "abc125"
     },
-    UpdateExpression: "set #n = :value1, #q = :value2, #p = :value3",
+    UpdateExpression: "set #q = :value1, #p = :value2",
     ExpressionAttributeNames: {
-        "#n": "name",
         "#q": "quantity",
         "#p": "price"
     },
     ExpressionAttributeValues: {
-        ":value1": "paprika",
-        ":value2": 10,
-        ":value3": 3.12
+        ":value1": 1,
+        ":value2": 14.75
     },
     ReturnValues: "UPDATED_NEW"
 }
