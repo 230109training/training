@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk');
+const uuid = require('uuid');
 
 AWS.config.update({
     region: "us-east-1", // replace the region value with the region in which
@@ -30,10 +31,10 @@ const documentClient = new AWS.DynamoDB.DocumentClient(); // Document Client
 const params = {
     TableName: 'grocery_items',
     Item: {
-        grocery_item_id: 'abc125',
-        name: 'pork chop',
-        quantity: 100,
-        price: 50
+        grocery_item_id: uuid.v4(),
+        name: 'celery',
+        quantity: 5,
+        price: 1.10
     }
 };
 
