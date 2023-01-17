@@ -32,7 +32,7 @@ const params = {
     Item: {
         grocery_item_id: 'abc125',
         name: 't-bone steak',
-        quantity: 1,
+        quantity: 100,
         price: 12.75
     }
 };
