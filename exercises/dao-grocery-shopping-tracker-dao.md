@@ -51,14 +51,24 @@ In this exercise, create a DAO layer file, `grocery-item-dao.js`, that will supp
 
 Example:
 ```javascript
-function addGroceryItem(grocery_item_id, name, quantity, price, category) {
-}
-
-function retrieveAllGroceryItems() {
-}
-
 function retrieveGroceryItemById(grocery_item_id) {
+    const params = {
+        TableName: 'grocery_items',
+        Key: {
+            grocery_item_id: grocery_item_id
+        }
+    }
+
+    return docClient.get(params).promise();
 }
 
+// Write other functions here
 // ...
+
+// How to test your dao functions??
+retrieveGroceryItemById("10").then((data) => {
+    console.log(data);
+}).catch((err) => {
+    console.error(err);
+})
 ```
