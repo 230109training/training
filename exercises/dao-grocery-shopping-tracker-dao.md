@@ -26,38 +26,46 @@ And the following global secondary index:
 
 ## Activity
 In this exercise, create a DAO layer file, `grocery-item-dao.js`, that will support operations for adding, retrieving, updating, and deleting items from the DynamoDB table, `grocery_items`. You will need to create a grocery_items table if you have not already. The DAO layer should contain the following functions:
-- `addGroceryItem(grocery_item_id, name, quantity, price, category)`
+- `async addGroceryItem(grocery_item_id, name, quantity, price, category)`
     - Adds a new item to the grocery_items table with the given grocery_item_id, name, quantity, price, and category
     - You may also choose to have the id automatically generated instead using, for example, the `uuid` npm package
-- `retrieveAllGroceryItems()`
+- `async retrieveAllGroceryItems()`
     - Retrieves all grocery items from the table
     - You can utilize `scan` for this
-- `retrieveGroceryItemById(grocery_item_id)`
+- `async retrieveGroceryItemById(grocery_item_id)`
     - Retrieves a grocery item with the given grocery_item_id
-- `retrieveGroceryItemsByCategory(category)`
+- `async retrieveGroceryItemsByCategory(category)`
     - Retrieves all grocery items belonging to the given category (ex. meat)
-- `updateGroceryNameById(grocery_item_id, newName)`
+- `async updateGroceryNameById(grocery_item_id, newName)`
     - Update the name of a grocery item with the given grocery_item_id
-- `updateGroceryQuantityById(grocery_item_id, newQuantity)`
+- `async updateGroceryQuantityById(grocery_item_id, newQuantity)`
     - Update the quantity of a grocery item with the given grocery_item_id
-- `updateGroceryPriceById(grocery_item_id, newPrice)`
+- `async updateGroceryPriceById(grocery_item_id, newPrice)`
     - Update the price of a grocery item with the given grocery_item_id
-- `updateGroceryCategoryById(grocery_item_id, newCategory)`
+- `async updateGroceryCategoryById(grocery_item_id, newCategory)`
     - Update the category of a grocery item with the given grocery_item_id
-- `deleteGroceryItemById(grocery_item_id)`
+- `async deleteGroceryItemById(grocery_item_id)`
     - Delete a grocery item with the given grocery_item_id
 
 **MAKE SURE TO MANUALLY TEST EACH FUNCTION BEFORE MOVING ONTO THE NEXT!!**
 
 Example:
 ```javascript
-function addGroceryItem(grocery_item_id, name, quantity, price, category) {
+async function retrieveGroceryItemById(grocery_item_id) {
+    const params = {
+        TableName: 'grocery_items',
+        Key: {
+            grocery_item_id: grocery_item_id
+        }
+    }
+
+    const data = await docClient.get(params).promise();
+
+    return data;
 }
 
-function retrieveAllGroceryItems() {
-}
-
-function retrieveGroceryItemById(grocery_item_id) {
+async function testFunction() {
+    console.log(await retrieveGroceryItemById("10"));
 }
 
 // ...
