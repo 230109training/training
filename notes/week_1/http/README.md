@@ -37,4 +37,3 @@ Headers contain additional information about the response, such as the content-t
 
 The message body, if present, contains the data that the server has sent, like a web page with html.
 
-
