@@ -47,7 +47,7 @@ In this exercise, create a DAO layer file, `grocery-item-dao.js`, that will supp
 - `deleteGroceryItemById(grocery_item_id)`
     - Delete a grocery item with the given grocery_item_id
 
-**MAKE SURE TO TEST EACH FUNCTION BEFORE MOVING ONTO THE NEXT!!**
+**MAKE SURE TO MANUALLY TEST EACH FUNCTION BEFORE MOVING ONTO THE NEXT!!**
 
 Example:
 ```javascript
