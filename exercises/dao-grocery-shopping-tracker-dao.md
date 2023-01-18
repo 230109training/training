@@ -46,3 +46,19 @@ In this exercise, create a DAO layer file, `grocery-item-dao.js`, that will supp
     - Update the category of a grocery item with the given grocery_item_id
 - `deleteGroceryItemById(grocery_item_id)`
     - Delete a grocery item with the given grocery_item_id
+
+**MAKE SURE TO TEST EACH FUNCTION BEFORE MOVING ONTO THE NEXT!!**
+
+Example:
+```javascript
+function addGroceryItem(grocery_item_id, name, quantity, price, category) {
+}
+
+function retrieveAllGroceryItems() {
+}
+
+function retrieveGroceryItemById(grocery_item_id) {
+}
+
+// ...
+```
