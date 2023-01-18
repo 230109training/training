@@ -59,7 +59,7 @@ function retrieveGroceryItemById(grocery_item_id) {
         }
     }
 
-    return await docClient.get(params).promise();
+    return docClient.get(params).promise();
 }
 
 // Write other functions here
