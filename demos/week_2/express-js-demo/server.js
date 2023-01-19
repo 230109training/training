@@ -3,6 +3,8 @@ const server = express();
 const PORT = 3000;
 const itemRouter = require('./routes/itemRouter');
 const personRouter = require('./routes/personRouter');
+const movieRouter = require('./routes/movieRouter');
+const bodyParser = require('body-parser');
 
 /**
  * Routing refers to the process of determining how an application should respond to a client request to a particular endpoint, based on the request's HTTP method and the endpoint's URL
@@ -12,8 +14,10 @@ const personRouter = require('./routes/personRouter');
  * 
  */
 
-server.use('/item', itemRouter);
-server.use('/person', personRouter);
+server.use(bodyParser.json());
+// server.use('/item', itemRouter);
+// server.use('/person', personRouter);
+server.use('/', movieRouter);
 
 server.listen(PORT, () => {
     console.log(`Server is listening on Port ${PORT}`);
