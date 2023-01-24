@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<body>
+    <input type="text"/>
+    <input type="checkbox"/>
+    <input type="range"/>
+<form>
+    <input type="text" name="email-input">
+</form>
+
+<form>
+    <label for="user-password">Password</label><br/>
+    <input type="password" name="user-password">
+</form>
+
+<form>
+    SELECT FAVORITE
+    <br/>
+    <input type="radio" name="favorite-fruit" id="apple">
+    <label for="apple">Apple</label><br/>
+    <input type="radio" name="favorite-fruit" id="banana">
+    <label for="banana">Banana</label><br/>
+    <input type="radio" name="favorite-fruit" id="grapes">
+    <label for="grapes">Grapes</label><br/>
+</form>
+
+<form id="login-form">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+<form>
+    <label for="select">Select Fruit:</label><br>
+    <select id="select" name="select">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="kiwi">Kiwi</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit Button">
+</form>
+
+<form>
+    <label for="select">Select Fruit:</label><br>
+    <select id="select" name="select" multiple>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="kiwi">Kiwi</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit Button">
+    <input type="reset" value="Reset Button">
+</form>
+
+<form action="http://localhost:3000/login", target="_blank" method="GET">
+    <label for="name">Name:</label><br>
+    <input type="text" required placeholder="Mark">
+    <br>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
