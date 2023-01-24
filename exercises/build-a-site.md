@@ -1,10 +1,10 @@
 # Build a 90s Website
-This exercise requires you to build a 90's website. It should look terrible, because that's how early websites actually looked like. The objective of this exercise is to have you experiment with HTML elements and see how they appear in the web browser
+This exercise requires you to build a 90's website. It should look terrible, because that's how early websites actually looked like. The objective of this exercise is to have you experiment with HTML elements and see how they appear in the web browser, and also get practice with using Git branches and making use of Github pull requests.
 
 1. Don't use any CSS libraries such as Bootstrap or Bulma (you can utilize CSS though, if you're already familiar with CSS, no worries if you're not)
 2. Don't use any JS (early websites were very "dumb", as in they couldn't really perform much actual dynamic functionality and rendering like modern websites today)
 
-## Github
+## Github Practice
 As you're working on your webpages, get into the habit of creating Git branches for each new "section" of the webpage you are adding
 
 1. Create a new branch using `git branch <branch name>`
