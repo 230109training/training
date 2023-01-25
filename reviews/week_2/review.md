@@ -176,3 +176,20 @@
         - Level One: The web service makes use of URIs, but does not use the HTTP methods, and HATEOAS. The services have many different URIs but are typically still using POST.
         - Level Two: The web service makes use of URIs and HTTP Methods, but not HATEOAS. In this case the web service typically hosts numerous URIs i.e. addressable resources. This is the most popular usecase of REST principles, but designers are expecting people to put some effort into mastering the APIs - generally by reading the supplied documentation
         - Level Three: The web service makes use of all three, URIs, HTTP, and HATEOAS. This is the most mature level of Richardson's model, and encourages easy discoverability. This level makes it easy for the responses to be self-descriptive using HATEOAS. The service leads the consumers through a trail of resources, causing the application state to transition as a result.
+* Git Advanced
+    - Branch: an alternative "timeline" of commits
+        - Switching between branches allows us to switch between different states of a project
+        - Normally, branches are used when developing new features for an application
+        - Those feature branches are then eventually merged into the main branch
+            - The main branch represents the "current version" of the application that has incremental features merged into it over time
+    - Commands
+        - `git branch <branch name>` to create a branch
+            - New branches should be created while in the main branch, so that the new branch starts branching off from the current state of the main branch
+        - `git checkout <branch name>` to switch branches
+        - `git merge <branch name>` can be used to merge the `"<branch name>"` branch into the branch we are currently in
+            - However, this should not be done unless merge conflicts need to be resolved
+            - Instead, pushing the feature branch to Github directly and then creating a pull request is the best practice so that other developers can review the code
+    - Pull Request
+        - Not a Git feature
+        - Pull requests are a feature developed by Git repository hosting websites such as Github.
+        - Allows for merging to occur on Github after other developers review changes that a developer(s) made
