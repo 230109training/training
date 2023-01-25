@@ -1,0 +1,106 @@
+/* @media only screen and (max-width: 600px){
+    body {
+        background: #A48520;
+        background: -moz-linear-gradient(left, #A48520 0%, #CB6CCA 50%, #607528 100%);
+        background: -webkit-linear-gradient(left, #A48520 0%, #CB6CCA 50%, #607528 100%);
+        background: linear-gradient(to right, #A48520 0%, #CB6CCA 50%, #607528 100%);
+    }
+} */
+
+img{
+    width: 300px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.container img{
+    align-items: baseline;
+}
+
+#heading2 {
+    background-color: coral;
+}
+
+/* CSS box properties */
+#box_example{
+    width: 300px;
+    height: 300px;
+    padding: 10px 30px 10px 10px;
+    border: 2px solid blue;
+    border-width: medium 10px thick 15px;
+    margin: 20px;
+}
+
+/* Ways to apply color */
+a {color: red;}
+div {color: rgb(230, 85, 36);}
+h1 {color: #ffa500};
+div {color: rgb(100, 20, 255);}
+div {color: rgb(30%, 50%, 80%);}
+div{color:rgb(132, 104, 187)}
+
+
+/* Class Selector */
+p.paragraph_class{
+    color: rgb(108, 9, 67)
+}
+
+#specific_paragraph{
+    color: #22e23c
+}
+
+/* Adjacent Sibling Combinator Selector */
+/* p + p { font-size: smaller;} */
+
+/* General Sibling Combinator Selector */
+p ~ p { font-size: smaller; }
+
+/* Universal Selector */
+* {
+    background-color: #153319;
+}
+
+/* Attribute Selector */
+[title^="heading"]{
+    color: red;
+}
+
+/* Grouping Selector */
+h1, h2, p {
+    font-family: Arial;
+    color: blue;
+}
+
+/* Children Selector */
+div > p {
+    background-color: red;
+}
+
+/* Descendant Selector */
+div p {
+    background-color: red;
+}
+
+p:hover{
+    background-color: yellow;
+}
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1
+}
+.two {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
