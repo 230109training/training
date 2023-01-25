@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
     <title>Homepage</title>
+
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid blue;
+        }
+    </style>
 </head>
 <body>
    <div>
-    <p>Lorem, ipsum dolor.</p>
+    <p onclick="console.log('I have been clicked')">Lorem, ipsum dolor.</p>
    </div>
 
    <div class="container">
@@ -15,6 +22,21 @@
     <p class="paragraphs">Lorem, ipsum dolor.</p>
    </div>
 
+   <h3 id="header3">This is a header 3</h3>
+
+
+   <!-- <div id="outer-div" onclick="alert(`outer-div`)">
+    <div id="inner-div" onclick="alert('inner-div')">
+        <h3 id="inner-header" onclick="alert('inner-header')">Inner Header</h3>
+    </div>
+   </div> -->
+
+   <div id="outer-div">
+    <div id="inner-div">
+        <h3 id="inner-header">Inner Header</h3>
+    </div>
+   </div>
+   
    <input id="change_text_button" type="button" value="Change Text"/>
     <script src="./index.js"></script>
 </body>
