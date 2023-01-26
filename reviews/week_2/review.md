@@ -108,6 +108,31 @@
         - Emphasizes an iterative approach to software development where the process of building the software is repeated many times, with each iteration building upon the previous
         - The main benefit is it enables flexibility and adaptation to changing requirements
         - The main drawback is that agile requires strong communication and collaboration between team members, where everyone takes a proactive approach, since there is less of a clear and well-defined proccess compared to waterfall
+    - Scrum
+        - Agile framework for managing and completing complex projects
+        - Principles
+            - Transparency
+            - Inspection
+            - Adaptation
+        - Revolves around the idea of a **sprint**
+            - A sprint is a single iteration
+            - Lasts 2-4 weeks
+        - Each sprint has the following 4 ceremonies
+            - Sprint Planning: team sets goals and plans for the new sprint
+            - Daily Scrum: short meeting held everyday in the morning to discuss progress and plan for the day
+                - What was accomplished the previous day?
+                - What will be done today?
+                - Are there any blockers?
+                -   A blocker is something that prevents a team member from moving forward
+                -   A blocker should be specific
+            - Sprint Review: team demos what they have built for the customer or other stakeholders
+            - Sprint Retrospective: where the team reflects on what went well and what could be improved
+        - Tasks/requirements are defined around the idea of **user stories**
+            - A user story is a description of a feature from the perspective of a user interacting with the product
+        - Story Pointing
+            - Technique utilized for estimating the complexity of a given task or feature
+            - Team members discuss the estimated relative complexity of a user story, and assign a point value to that user story
+            - Point values are assigned typically using the fibonacci sequence (1, 2, 3, 5, 8, 13, 21, etc.), where a higher value indicates a higher level of complexity/difficulty
 * Express
     - A web framework for Node.js that enables the rapid development of HTTP based APIs
     - Consists of an API for defining routes and an embedded web server
