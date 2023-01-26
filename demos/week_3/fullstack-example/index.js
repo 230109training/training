@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
     });
 });
 
-
 const actualUsername = "user1";
 const actualPassword = "pass1";
 
