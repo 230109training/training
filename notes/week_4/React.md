@@ -80,6 +80,81 @@ function Greeting(props){
 }
 ```
 
-Function components do not have access to the component lifecycle methods like `componentDidMount
+Function components do not have access to the component lifecycle methods like `componentDidMount`, `componentDidUpdate` and `componentWillUnmount`. Function components also do not have access to state by default and must be provided by using the `useState()` hook and `useEffect()` to handle component state and side-effects.
 
 ### Class Components
+
+React class components are components built using the ES6 class syntax in TS. They allow for more advanced logic and state management when compared to functional components.
+
+Basic React Class Component
+```typescript
+import React, { Component } from 'react';
+
+interface Props {
+    message: string;
+}
+
+class MyComponent extends Component<Props>{
+
+    state = {
+        count: 0
+    }
+
+    increment = () => {
+        this.setState({count: this.state.count + 1});
+    }
+
+    render(){
+        return(
+            <div>
+                <p>{this.props.message}</p>
+                <p>Count: {this.state.count}</p>
+                <button onClick={increment}>Increment</button>
+            </div>
+        );
+    }
+}
+```
+
+- `constructor`: initializes the component's state and binds class methods. In the constructor, you can also access the component's props.
+- `props`: Props are input passed from a parent component to a child component. They are read-only and cannot be modified directly. You can access props in the component using `this.props` when inside a class
+- `state`: State is the private data of the component that can change over time. State can be updated with `setState` and re-renders the component whenver the state changes. You can access the class components state using `this.state`
+- `render`: This method returns teh JSX that represents the component's view. This is what gets displayed on the page
+
+### Class Component's Lifecycle: Mounting, Unmounting, Updating, Error Handling
+
+React class components have four main lifecycle phases:
+
+1. Mounting
+    - This is the phase where a component is being added to the DOM for the first time.
+    - These are the following methods called during the mounting phase:
+        - `constructor`: initializes the state and binds class methods
+        - `render`: returns the JSX for the component
+        - `componentDidMount`: Called after the component has been successfully mounted. Ideal for performing any setup that requires the component's DOM nodes, such as fetching data or setting up timers
+2. Updating
+    - This is the phase where a component is re-rendered due to changes in its state or props.
+    - The following methods are called during the updating phase:
+        - `render`: Returns the updated JSX for the component
+        - `componentDidUpdate`: Called after the ocmponent has been successfully updated. Ideal for updating any state or perform any actions that need to be taken after the component updates
+3. Unmounting
+    - This is the phase where a component is being removed from the DOM.
+    - The following methods are called during the unmounting phase
+        - `componentDidUnmount`: Called just before the component is unmounted. Ideal for performing any cleanup, such as cancelling timers or removing any event listeners
+4. Error Handling
+    - This is the pahse where a component encounters an error while rendering.
+    - The following method is called during the Error Handling phase:
+        - `componentDidCatch`: Called when an error occurs within the component or its children. Ideal for logging errors or displaying an error message to the user
+
+It's important to understand that not all lifecycle methods are used in every component, and that different methods are used depening on the specific needs of the component. However, having a general understanding of the lifecycle phases and their associated methods can help you write more effective and efficient React components.
+
+## One-Way Data Flow
+
+One-way data flow, also known as unidirectional data flow, is a design pattern used in React and other front-end frameworks. It specifies that data should flow in only one direction, from parent components to child components, instead of allowing data to flow in any direction between components.
+
+One way data flow helps to keep the structure of your application predictable and maintainable, as data only flows in a single, well-defined direction. It also makes it easier to debug and test your application, as you always know where data is coming from and where it is going.
+
+In React, this concept is achieved by passing data from a parent component to its children using props, which are read-only values that cannot be modified by the child components. If a child component needs to update the data, it should send a message to the parent component, which can then update the state and trigger a re-render of the component tree.
+
+
+
+
