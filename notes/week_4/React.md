@@ -156,5 +156,32 @@ One way data flow helps to keep the structure of your application predictable an
 In React, this concept is achieved by passing data from a parent component to its children using props, which are read-only values that cannot be modified by the child components. If a child component needs to update the data, it should send a message to the parent component, which can then update the state and trigger a re-render of the component tree.
 
 
+## Props and State
 
+In React, components can be nested in other components (often referred to as parent and child components). Props are passed from parent to child. Here is an example:
 
+```typescript
+function Person(props){
+    return(
+        <div>
+            <h3>I am a person, and I have a car named 'Honda'</h3>
+            <Honda secret="property to be passed"/>
+        </div>
+    )
+}
+```
+```typescript
+function Honda(props){
+
+    return(
+        <div>
+            {props.secret}
+        </div>
+    )
+}
+```
+Honda is receiving a prop called `secret` with a value `property to be passed` from its parent, Person. In React, props are **immutable**, and cannot be changed.
+
+`state` is an object that contains the internal state of a component. Unlike props, state can be updated by the class component using `setState` or using hooks in a functional component. When thes ate changes, the component will re-render, updating the view to reflect the new state.
+
+Both `props` and `state` are used to determine the behavior and rendering of a component, but they are used for different purposes. `Props` are used to pass data and behavior down from parent components to child components, while `state` is used to manage internal state and trigger re-renders when it changes.
