@@ -185,3 +185,212 @@ Honda is receiving a prop called `secret` with a value `property to be passed` f
 `state` is an object that contains the internal state of a component. Unlike props, state can be updated by the class component using `setState` or using hooks in a functional component. When thes ate changes, the component will re-render, updating the view to reflect the new state.
 
 Both `props` and `state` are used to determine the behavior and rendering of a component, but they are used for different purposes. `Props` are used to pass data and behavior down from parent components to child components, while `state` is used to manage internal state and trigger re-renders when it changes.
+
+## Immutability
+
+State is defined either by declaring a property of `this.state`(class components) or by defining state using a lifecycle hook `useState()` (functional components).
+
+You should never be mutating state directly. This value, while you can change it, it should only be changed by using the appropriate mutator.
+
+### Why not change state directly?
+
+Mutating state directly may apprea to function, however, mutating state directly can lead to components which are buggy or difficult to optimize. Here is an example where mutating state directly is an issue:
+- You make a component more efficient by making it pure
+    - This means it will only re-render when its `props` changes
+- You add or remove elements from an array stored in the component's state
+    - The arrya itself will not be seen as changed so the component will not re-render
+    - The update will not be reflected in the view
+
+Immutability allows for changes to more easily be detected. Reference comparison is a lot more efficient than value comparison. No travering objects is needed to detect a change.
+
+## Validating Properties
+
+Validating properties in React helps to ensure that components receive the correct data and that they behave as expected. This can be done using `PropTypes`.
+
+```typescript
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+```
+
+## Lists and Keys
+
+A key is a specific attribute that react uses while rendering collection of elements. Keys help React identify which items have been changed, added, or removed, playing a significant part in the DOM reconcilliation process.
+Keys must be unique among sibling elements, but need not be globally unique. A unique ID associated with the element is the best choice to act as its key. If a unique key is not available, you may be able to add a new ID property to your model or hash some parts of the content to generate a key.
+Only if there is no better option should you use the index of the element in it's array, especially if you expect the order of the elements to change.
+
+```typescript
+return(
+    <ul>
+        {
+            items.map(item => <li key={item.id}>{item.text}</li>)
+        }
+    </ul>
+);
+```
+
+## Event Handling
+
+Handling events is syntactically similar to handling events with inline HTML. When using JSX, however, event names use camelCase, and the event handler is passed in as a JavaScript reference rather than just a string.
+
+```typescript
+const MyButton = () => {
+    const doSomething = () => {
+        // event functionality
+    }
+
+    return <button onClick={doSomething}>Click me!</button>
+}
+```
+
+### Passing Event Handlers as Props
+
+You cannot modify state in a parent component, but by passing an event handler into a child component, the handler method has access to the parent's state. This is similar to closures.
+
+### Synthetic Events
+
+A `SyntheticEvent` is a cross-browser wrapper around the browser's native event. When an event occurs in React, this wrapper is used rather than the normal JS event. It has the same interface as the browser's native event, but using `SyntheticEvent` allows for additional benefits such as event pooling. This means that `SyntheticEvent` objects will be reused to improve the performance of the application.
+
+## Lifting State
+
+Lifting state is a technique in React where you move state from a lower level component to a higher-level component. This is useful when you have multiple components that need access to the same state, and you want to centralize the state management in a single component.
+
+The basic idea is to have lower level components pass data and callbacks to the higher-level component via props, and have the higher-level component manage the state and pass it down to the lower-level components as props.
+
+## Controller View Pattern
+
+The controller view pattern is ana architectural pattern used in software engineering. It separates the application logic from the user interface, providing a clear separation of concerns between the two. The "controller" component is responsible for handling user input and updating model, while the "view" component is responsible for presenting the data to the user. The controller and view communicate through a well-defined interface, allowing changes to one component without affecting the other.
+
+## High Order Components
+
+High order components are functions that take a comopnent and return a new component. The traditional component model transforms props into a portion of the UI. HOCs take a component as a parameter and transforms it, returning a new component with added functionality. The idea is based on the idea of high-order functions in JavaScript, where a function is taken as an argument, and another function is returned.
+
+```typescript
+const withAuth = (Component: any) => {
+
+    function isAuthenticated(){
+        // authenticating logic
+        return true;
+    }
+
+    return function AuthenticatedComponent(props: any){
+        if(isAuthenticated()){
+            return(
+                <Component {...props}></Component>
+            );
+        }else{
+            return <div> Please login to access this website</div>
+        }
+    }
+}
+
+export default withAuth
+```
+
+```typescript
+const TestComponent = () => {
+  return (
+    <p>Hello World</p>
+  )
+}
+
+export default withAuth(TestComponent);
+```
+
+## Containment
+
+Containment is a pattern in React where a component (the Container) passes data and behavior to its children components. The children components are unaware of their parent component and are only concerned with rendering the data they recieve via props.
+
+Containment allows you to reuse components and manage their behavior and state in a centralized way. This makes it easier to reason about the behavior of a component and to test it in isolation.
+
+## Specialization
+
+Specialization is a pattern in React where a component is created to handle a specific behavior or peice of state, and then re-used in different parts of an application.
+This allows for better code reuse and encapsulation, as well as making it easier to reason about the behavior of a component and to test it in isolation.
+
+For example, you may create a specialized component that handles a specific form input, such as a text input or a dropdown select. You can then reuse this component in multiple forms in  your application, and only need to manage its state and behavior in one place.
+
+## Refs
+
+Refs are a way to access the properties of DOM elements in React. They are created using the `useRef()` and attached to React elements via the `ref` attribute. Refs are used in cases where you need direct access tot he DOM element, such as for focus management, measurement, or animation.
+
+```typescript
+import React, { MutableRefObject, useRef } from 'react'
+
+const InputExample = () => {
+
+    const inputRef = useRef() as MutableRefObject<HTMLInputElement>;
+
+    const handleClick = () => {
+        inputRef.current.focus();
+        console.log(inputRef.current.value);
+    }
+  return (
+    <div>
+        <input type="text" ref={inputRef}/>
+        <button onClick={handleClick}>Focus the Input</button>
+    </div>
+  )
+}
+
+export default InputExample
+```
+
+In this example, the `inputRef` is created using `useRef()` and attached to the input element via the `ref` attribute. When the button is clicked the `handleClick` function is called, which accesses the `input` element using `inputRef.current` and calls its `focus` method then prints out the value of the `input` to the console. 
+
+## Axios
+
+Axios is a popular JS library for making HTTP requests. It is often used in conjunction with React to retrieve data from a server and to update the state of a React component with the fetched data.
+Axios provides a simple and easy-to-use API for making HTTP requests. It supports a wide range of requests, including `GET`, `POST`, `PUT`, and `DELETE`. Axios also supports automatic transformation of request and response data, making it easy to work with JSON data.
+
+```typescript
+// promises
+const axiosGet = () => {
+    axios.get(`${BASE_URL}/posts/1`)
+        .then((response) => {
+            console.log(response)
+        })
+}
+
+// async await
+const asyncAxiosGet = async () => {
+    const response = await axios.get(`${BASE_URL}/posts/1`);
+    console.log(response)
+}
+
+// axios post example
+const axiosPost = () => {
+    axios
+        .post(`${BASE_URL}/posts`, {
+            title: 'Hello World',
+            body: "this is a new post!",
+            userId: 1
+        })
+        .then((response) => {
+            console.log(response.data);
+        })
+}
+```
+
+### Axios vs Fetch
+
+- API
+    - Axios provides a more user-friendly API compared to the native Fetch API.
+- Automatic Transformation
+    - Axios automatically transforms request and response data to and from JSON, making it easy to work with JSON Data.
+- Interceptors
+    - Axios provides support for interceptors, which allow you to process requests and responses globally, before they reach the final destination.
+- Browser Support
+    - Fetch is supported on Modern browsers, but may not be supported in older browsers
+    - Axios can be used with a polyfill to provide support for older browsers
+
