@@ -29,6 +29,21 @@ const NavBar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/form">Form Demo</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/passing">Passing Handlers Demo</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/login">Login Demo</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/hoc">Higher Order Component Demo</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/refs">Refs Demo</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/axios">Axios Demo</Link>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,14 +1,19 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AxiosExample from './Components/Axios/AxiosExample';
 import ClassComponent from './Components/ClassComponent/ClassComponent';
 import EventsDemo from './Components/EventsDemo/EventsDemo';
 import BasicComponent from './Components/FirstComponent/BasicComponent';
+import TestComponent from './Components/HighOrderComponent/TestComponent';
 import Hook from './Components/HooksDemo/Hook';
 import ListDemo from './Components/ListDemo/ListDemo';
+import LoginComponent from './Components/LoginExample/LoginComponent';
 import NavBar from './Components/NavBarDemo/NavBar';
 import ValidatedForm from './Components/OneWayDataFlow/ValidatedForm';
+import Parent from './Components/PassingEventHandler/Parent';
 import ParentComponent from './Components/Props&StateDemo/ParentComponent/ParentComponent';
+import InputExample from './Components/Refs/InputExample';
 
 /**
  * What is JSX?
@@ -54,6 +59,11 @@ function App() : JSX.Element{
         <Route path="/class" element={<ClassComponent message={"Hello Class"}/>}></Route>
         <Route path="/hook" element={<Hook/>}></Route>
         <Route path="/form" element={<ValidatedForm/>}></Route>
+        <Route path="/passing" element={<Parent/>}></Route>
+        <Route path="/login" element={<LoginComponent/>}></Route>
+        <Route path="/hoc" element={<TestComponent/>}></Route>
+        <Route path="/refs" element={<InputExample/>}></Route>
+        <Route path="/axios" element={<AxiosExample/>}></Route>
       </Routes>
     </div>
   );
