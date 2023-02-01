@@ -1,11 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
+    // to use it as a reference
+  const user = useSelector((state: any) => state.user);
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/">React Examples</Link>
+    <Link className="navbar-brand" to="/">{user.username}</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -43,6 +46,12 @@ const NavBar = () => {
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/axios">Axios Demo</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/reduce">Reducer Demo</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/redux">Redux Demo</Link>
         </li>
       </ul>
     </div>

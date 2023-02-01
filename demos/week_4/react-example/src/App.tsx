@@ -13,6 +13,8 @@ import NavBar from './Components/NavBarDemo/NavBar';
 import ValidatedForm from './Components/OneWayDataFlow/ValidatedForm';
 import Parent from './Components/PassingEventHandler/Parent';
 import ParentComponent from './Components/Props&StateDemo/ParentComponent/ParentComponent';
+import Counter from './Components/Reducer/Counter';
+import ReduxLogin from './Components/Redux/ReduxLogin';
 import InputExample from './Components/Refs/InputExample';
 
 /**
@@ -64,6 +66,8 @@ function App() : JSX.Element{
         <Route path="/hoc" element={<TestComponent/>}></Route>
         <Route path="/refs" element={<InputExample/>}></Route>
         <Route path="/axios" element={<AxiosExample/>}></Route>
+        <Route path="/reduce" element={<Counter/>}></Route>
+        <Route path="/redux" element={<ReduxLogin/>}></Route>
       </Routes>
     </div>
   );
