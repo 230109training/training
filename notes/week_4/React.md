@@ -393,4 +393,7 @@ const axiosPost = () => {
 - Browser Support
     - Fetch is supported on Modern browsers, but may not be supported in older browsers
     - Axios can be used with a polyfill to provide support for older browsers
+- Error Handling
+    - Axios will throw an error when recieving a status code of 400 - 500
+    - Fetch will not and requires you to check the status code of the response
 
