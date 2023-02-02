@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { userActions } from './slices/userSlice';
+import { DispatchType, RootState } from './store/store';
 
 const ReduxLogin = () => {
 
@@ -11,10 +12,10 @@ const ReduxLogin = () => {
 
     // Redux
     // to use it as a reference
-    const user = useSelector((state: any) => state.user);
+    const user = useSelector((state: RootState) => state.user);
 
     // to update it, we need a dispatcher
-    const dispatch = useDispatch();
+    const dispatch: DispatchType = useDispatch();
 
     const handleSubmit = (event: any) => {
         event.preventDefault();
