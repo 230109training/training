@@ -30,7 +30,7 @@ function PokemonFetcher() {
 
     // Changing the idInputValue state in our PokemonFetcher component
     // Whenever a user types in a number to the input
-    function onUserInput(event: React.ChangeEvent<HTMLInputElement>) {
+    const onUserInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         const inputElement = event.target;
         const inputValue = Number(inputElement.value);
         setIdInputValue(inputValue);
