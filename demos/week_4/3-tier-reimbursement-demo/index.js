@@ -5,7 +5,7 @@ const { register } = require('./service/user-service');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/users', (req, res) => {
+app.post('/users', async (req, res) => {
     
     // The purpose of the controller layer is to extract data from HTTP requests and construct HTTP responses
     // (+ authorization)
@@ -19,7 +19,10 @@ app.post('/users', (req, res) => {
         const confirmPassword = req.body.confirmPassword;
 
         // Pass the data to the service layer
-        register(username, password, confirmPassword);
+        // If you are calling an async function, make sure that you await the async function
+        await register(username, password, confirmPassword);
+        // Register MAY throw LengthValidationError, UsernameAlreadyTakenError, and PasswordMatchingError
+        // Those errors will be caught if they occur by the catch block
 
         res.statusCode = 201;
         res.send({
