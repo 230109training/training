@@ -25,7 +25,7 @@ app.post('/users', async (req, res) => {
         // Those errors will be caught if they occur by the catch block
 
         res.statusCode = 201;
-        res.send({
+        return res.send({
             "message": "User successfully registered"
         });
     } catch(err) {
@@ -35,7 +35,7 @@ app.post('/users', async (req, res) => {
             res.statusCode = 500; // 500 is reserved for any error that was not "expected" by the system
         }
 
-        res.send({
+        return res.send({
             "message": err.message
         });
     }
