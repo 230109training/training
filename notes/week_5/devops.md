@@ -69,6 +69,14 @@ AWS has 3 different services that help to facilitate the CI/CD process: CodePipe
         - CodeDeploy takes the build artifact and deploys it to an EC2 instance
 - Summary: CodePipeline acts as a coordinator between CodeBuild and CodeDeploy
 
+#### Structure of a pipeline
+- Stage: each stage contains 1 or more action groups
+    - Action groups: each action group contains 1 or more actions
+        - Actions
+
+- Actions within an action group run in parallel (run at the same time)
+- Action groups run sequentially one by one
+
 ### CodeBuild
 - Fully managed build service for compiling source code, running tests, producing packages ready for deployment
 - CodeBuild uses a special build specification file known as the **buildspec.yml** file for defining steps used to build the application, run tests, etc.
