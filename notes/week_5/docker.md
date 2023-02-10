@@ -68,3 +68,8 @@ A Dockerfile contains instructions for building a Docker image. It is a file tha
 CMD v. ENTRYPOINT
 - CMD can be overwritten when starting the container by specifying additional command line arguments
 - ENTRYPOINT cannot be overwritten. Any additional command line arguments will not be assumed to be a command, but rather arguments that are appended to the ENTRYPOINT command
+
+## Port Mapping
+When creating a container, we need to specify a port mapping so that external traffic can make its way into the container. The way it works for Docker is that each container has its own isolated network, so by default, no external traffic can reach the container.
+
+If we use the `docker run` command, for example, then `docker run -p 4000:8080 <image ID or image name>` will create AND start a container that has port 4000 of the host mapped to port 8080 of the container. Any external traffic must send data to port 4000, which will then be reached by the container
