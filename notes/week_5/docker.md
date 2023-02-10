@@ -73,3 +73,26 @@ CMD v. ENTRYPOINT
 When creating a container, we need to specify a port mapping so that external traffic can make its way into the container. The way it works for Docker is that each container has its own isolated network, so by default, no external traffic can reach the container.
 
 If we use the `docker run` command, for example, then `docker run -p 4000:8080 <image ID or image name>` will create AND start a container that has port 4000 of the host mapped to port 8080 of the container. Any external traffic must send data to port 4000, which will then be reached by the container
+
+## More on Docker Registries
+A Docker container registry is a centralized repository for storing and distributing Docker images. Here are some key points regarding registries:
+1. Public and private registries: A docker repository can either be a public or private one. Public repositories are available to anyone and can be used to store and distribute public images. Anybody can pull an image from a public repository. Private repositories, on the other hand, are only accessible to authorized users.
+2. Security: Docker registries, in particular private repositories, have access control features as well as encryption. This helps to ensure that images are secure and only accessible to authorized users
+3. Image Management: Images can be managed through tagging, which allows us to have multiple different versions of an image
+
+Image Naming Convention
+- `<docker account identifier>/<image name>:version`
+    - version: either be `latest` or some sort of number, such as `1.0`
+
+Pull an image: `docker pull <entire image name>`
+- if you leave off `:<version>` at the end, it will implicitly pull the `:latest` version
+
+Push an image: `docker push <entire image name>`
+- Need to be logged in to push
+- `docker login`
+    - Specify username + password (ex. DockerHub)
+    - Use AWS CLI: `aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <account identifier>` (for AWS ECR)
+        - You need the appropriate permissions for whatever is using the CLI command (ex. if running command on EC2, must have IAM Role attached to EC2 with the appropriate ECR permissions)
+
+## AWS ECR
+Amazon ECR (Elastic Container Registry) is a fully-managed Docker container registry provided by AWS. It is a secure and scalable service that makes it easy to store, manage, and deploy Docker container images
