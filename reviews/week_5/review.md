@@ -355,5 +355,31 @@ Topics: EC2, S3, DevOps, CodePipeline, CodeBuild, CodeDeploy, Docker, SonarCloud
         - Elastic Container Registry
         - Secure and scalable service where we can store as many Docker images as we would like
         - Both public and private repositories are possible 
+* Technical Debt
+    - Refers to the cost of maintaining and fixing a codebase due to shortcuts, compromises, or quick fixes that were made during development
+    - Technical debt accumulates, or "snowballs" over time as the codebase grows, making it more difficult and time-consuming to add new features or make changes to the code
+    - Can arise from a variety of causes, including
+        1. Lack of code documentation: when code is not properly documented, it becomes difficult for developers to understand how the codebase works, which makes it harder to work on new features or make changes
+        2. Poor code quality: poorly written code or hard to understand code can be difficult to maintain and can lead to bugs and other issues
+        3. Shortcuts in Development: Not following best practices, such as test driven development, can lead to technical debt
+        4. Quick fixes: Making quick fixes to resolve problems in the short term without addressing the root cause can lead to technical debt
+    - Managing technical debt
+        - Implementing best practices throughout
+            - Regular code reviews
+            - Continuous Integration
+        - Tools like SonarCloud
+            - Static code analysis
+            - Identify "code smells" to be fixed
+        - Incrementally develop and test as you go
+* SonarCloud
+    - Cloud-based code quality platform with automated code analysis for software projects
+    - A service provided by a company called SonarSource
+    - Useful for "static code analysis"
+        - Static code analysis: where the code is analyzed without running the code
+        - Dynamic code analysis: where the code is analyzed by running the code
+            - Generating unit test code coverage reports
+            - In order to know how many lines of code are "covered" by the unit tests that we have, we need to actually execute the unit tests, which will then inevitably execute the code being tested, which will provide the code coverage metrics
+    - SonarCloud helps to track and manage technical debt, identify potential bugs, vulnerabilities, and security issues
+    - Supports many languages, such as Java, C#, JavaScript, Python, etc.
 
 
