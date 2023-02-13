@@ -1,13 +1,6 @@
 # Welcome to 230109 Serverless NERD (Node.js, Express.js, React, DynamoDB)!
 This is the training repository for the Serverless NERD cohort starting on January 9th, 2023. All of the notes, demos, study guides, project guidelines, and other resources will be found here.
 
-## Training Recaps
-* Documents containing recaps of what was covered for a particular week will be listed here
-
-| Week | Topics Covered | Link |
-| :--- | :------------- | :--- |
-| 1 | ... | ... |
-
 ## Weekly Expectations
 * Training starts at 10:00 AM EST and ends at 6:00 PM EST everyday
     - You are expected to be on time each day. You may miss important information if you are not
