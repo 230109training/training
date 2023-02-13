@@ -36,7 +36,7 @@ Summary: Docker images -> Used to create Docker containers -> Run Docker contain
 - `docker build`: Used to build a Docker image from a Dockerfile
 - `docker push`: Used to push an image to a Docker registry
 - `docker pull`: Used to pull an image from a Docker registry
-- `docker create`: Used to create a container from an image, with starting the container
+- `docker create`: Used to create a container from an image, without starting the container
 - `docker start`: Used to start a container that is not running
 - `docker run`: Used to create AND start a container from an image
 - `docker stop`: Used to stop a running container
