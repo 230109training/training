@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: dynamodb-sam-demo
+Transform:
+- AWS::Serverless-2016-10-31
+Resources:
+  LoginFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: LoginFunction
+      Handler: login-handler.handler
+      Runtime: nodejs16.x
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: UsersTable
+      Environment:
+        Variables:
+          USERS_TABLE_NAME:
+            Ref: UsersTable
+      Events:
+        Login:
+          Type: Api
+          Properties:
+            Path: /login
+            Method: post
+    Metadata:
+      SamResourceId: LoginFunction
+  RegisterFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: RegisterFunction
+      Handler: register-handler.handler
+      Runtime: nodejs16.x
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: UsersTable
+      Environment:
+        Variables:
+          USERS_TABLE_NAME:
+            Ref: UsersTable
+      Events:
+        Login:
+          Type: Api
+          Properties:
+            Path: /users
+            Method: post
+    Metadata:
+      SamResourceId: RegisterFunction
+  UsersTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: username
+        AttributeType: S
+      KeySchema:
+      - AttributeName: username
+        KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+Outputs:
+  WebEndpoint:
+    Description: API Gateway endpoint URL for Prod stage
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/
