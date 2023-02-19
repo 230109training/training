@@ -15,7 +15,7 @@
 3. What are HTML tags, and how are they used to create content on a web page?
     <details>
     <summary>Answer</summary>
-    HTML tags are used to define the structure and content of a web page. They consist of angled brackets surrounding a keyword, such as `<h1>` for a heading or `<p>` for a paragraph. HTML tags are used to create the elements of a web page, such as headings, paragraphs, links, and images.
+    HTML tags are used to define the structure and content of a web page. They consist of angled brackets surrounding a keyword, such as h1 for a heading or p for a paragraph. HTML tags are used to create the elements of a web page, such as headings, paragraphs, links, and images.
     </details><br>
 
 ## Level 2: Intermediate
@@ -36,5 +36,5 @@
 1. What is the difference between semantic and non-semantic HTML, and why is semantic HTML important in web development?
     <details>
     <summary>Answer</summary>
-    Semantic HTML refers to the use of HTML tags that convey meaning and structure to the content of a web page, such as `<h1>` for a main heading or `<nav>` for a navigation menu. Non-semantic HTML refers to the use of generic tags such as `<div>` and `<span>` that do not convey any specific meaning or structure. Semantic HTML is important in web development because it makes the content of a web page more accessible to screen readers and search engines, and helps to improve the overall usability and
+    Semantic HTML refers to the use of HTML tags that convey meaning and structure to the content of a web page, such as h1 for a main heading or nav for a navigation menu. Non-semantic HTML refers to the use of generic tags such as div and span that do not convey any specific meaning or structure. Semantic HTML is important in web development because it makes the content of a web page more accessible to screen readers and search engines, and helps to improve the overall usability and
     </details><br>
