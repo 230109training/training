@@ -2,7 +2,7 @@
 
 ## Description
 
-This exercise involves the creation of a component that displays a list of Pokemon from the PokeAPI. The component will display the name and image of each Pokemon in that list. You will also need to use TypeScript to define the type of the data that will be in the response from the API.
+This exercise involves the creation of a component that displays a list of Pokemon from the PokeAPI. The component will display the name of each Pokemon in that list. You will also need to use TypeScript to define the type of the data that will be in the response from the API.
 
 ## Approach
 
