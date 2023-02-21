@@ -9,7 +9,7 @@ This exercise involves the creation of a component that displays a list of Pokem
 1. Create a new React component called PokemonList.
 2. Use Axios to retrieve a list of Pokemon from the PokeAPI.
 3. Use TypeScript to define the shape of the data being fetched from the API.
-4. Display the name and image of each Pokemon in the list using the appropriate HTML elements.
+4. Display the name of each Pokemon in the list using the appropriate HTML elements.
 5. Style the component using CSS.
 
 ## Hints
