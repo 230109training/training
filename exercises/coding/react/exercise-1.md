@@ -13,6 +13,9 @@ This exercise involves the creation of a component that displays a list of Pokem
 5. Style the component using CSS.
 
 ## Hints
+- This component is focused purely on retrieving information from the API and displaying it in a useful way
+    - Don't worry about including a search ability for unique pokemons, this is not what this exercise is asking for
+    - This application will be built upon, simply displaying what is retrieved from the API will not be considered enough for a front end app
 - Use TypeScript interfaces to define the shape of the data being retrieved
 - Use `useState` hook to store the list of the Pokemon within the state of the component
     - ```typescript
@@ -35,6 +38,12 @@ This exercise involves the creation of a component that displays a list of Pokem
 
 - A working `PokemonList` component that displays a list of Pokemon from the PokeAPI
 - A loom recording titled `React Exercise 1 (Displaying Pokemon List) firstName lastName`
+    - Softskills and Presentation
+        - Be centered on the camera
+        - Look into the camera, not at the screen
+            - This how you emulate eye contact while on camera
+        - This should be professionally presented
+            - You do not need to wear professional clothes
     - Introduce what you have done
     - Explain how you approached it, and why you chose the decisions you did
     - Talk about what you used in the exercise (React features) and why

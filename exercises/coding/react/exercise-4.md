@@ -26,6 +26,12 @@ This exercise involves integrating React Redux into the PokemonList and PokemonD
 
 - A working PokemonList and PokemonDetail component with React Redux integration
 - A loom recording titled `React Exercise 5 (Implementing React Redux) firstName lastName`
+    - Softskills and Presentation
+        - Be centered on the camera
+        - Look into the camera, not at the screen
+            - This how you emulate eye contact while on camera
+        - This should be professionally presented
+            - You do not need to wear professional clothes
     - Introduce what you have done
     - Explain how you approached it, and why you chose the decisions you did
     - Talk about what you used in the exercise (React features) and why
