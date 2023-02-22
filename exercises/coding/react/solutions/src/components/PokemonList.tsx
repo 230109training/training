@@ -1,7 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 
 interface Pokemon{
+    id?: number;
     name: string;
     url: string;
     image?: string;
@@ -21,7 +23,7 @@ const PokemonList = () => {
         let updatedPokemons: Pokemon[] = [];
         for(let i: number = 0; i< pokemons.length; i++){
             let response = await axios.get(pokemons[i].url);
-            updatedPokemons.push({...pokemons[i], image: response.data.sprites.front_default})
+            updatedPokemons.push({...pokemons[i], image: response.data.sprites.front_default, id: response.data.id})
         }
         setPokemonList(updatedPokemons);
     }
@@ -32,7 +34,7 @@ const PokemonList = () => {
             {pokemonList.map((pokemon: Pokemon) => {
                 return (
                 <li key={pokemon.name}>
-                    {pokemon.name}
+                    <Link to={`/pokemon/${pokemon.id}`}>{pokemon.name}</Link>
                     <img src={pokemon.image}/>
                 </li>);
             })}
