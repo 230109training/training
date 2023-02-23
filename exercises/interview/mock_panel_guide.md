@@ -16,12 +16,16 @@ The rubric can be found [here](https://docs.google.com/spreadsheets/d/12_miXsfut
 1. Define the Roles
     - Determine who will play the roles of the interviewee and the interviewer
     - The roles will be moved around so don't focus on this step for too long
+    - Decide the order in which the interviewers will ask their questions
+        - Or if preferred, choose someone to lead the panel
+        - This can be changed each time the interviewer is changed
 2. Prepare Questions
     - Each interviewer should assume the role of a member of the company and a manager of a different team
     - As each respective manager will need different skills, each interviewer must prepare a different set of questions to each other based on their requirements
     - The interviewers should make sure the questions are relevant to the job they need
     - Remember to not just use the questions in the question bank, make sure to make your own for what you feel is relevant
         - Some points to look out for are the interviewees skills, experiences, personality, etc.
+    - There is the technical and behavioral question bank available for reference
 3. Practice
     - Each interviewee should spend a few minutes just practicing with themselves either on camera or not
     - Run through a set of questions and practicing answering them
@@ -36,7 +40,10 @@ The rubric can be found [here](https://docs.google.com/spreadsheets/d/12_miXsfut
     - You can also mention any relevant projects or experience with the relevant technologies
 3. Ask Questions
     - Start the interview with asking questions related to the the interviewers respective job
+    - Each interviewer should ask at least two questions
     - Don't forget to ask follow up questions
+    - Take notes for each response
+        - These notes will be used when it comes time to grade the interviewee
 4. Share Feedback
     - Once the interview is over, provide constructive feedback on the interviewee's performance
     - Focus on both the strengths and where they can improve
