@@ -48,5 +48,9 @@ The rubric can be found [here](https://docs.google.com/spreadsheets/d/12_miXsfut
     - Once the interview is over, provide constructive feedback on the interviewee's performance
     - Focus on both the strengths and where they can improve
     - Write down a grade for the interviewee for each of the metrics on the rubric if you can
+5. Be respectful
+    - Treat each person with respect and professionalism
+    - Make sure to listen to their responses and engage in some dialogue
+    - Provide an environment that allows the interviewee to showcase their skills and experience
 
 We will be requiring the feedback and grade given by each interviewer. This grade is just for us to have a better idea of where everyone is and will not be used for any kind of grading officially like with QC.
