@@ -2,13 +2,13 @@
 
 ## Description
 
-This exercise involves writing basic test cases using Jest to ensure that a function called `add` works correctly for different input values.
+This exercise involves writing basic test cases using Jest to ensure that a function called `add` works correctly for different input values. This exercise will involve following TDD (Test Driven Development) in which the tests should be completed first, and then the function should be generated to pass the tests.
 
 ## Approach
 
-1. Write a function called add that takes two arguments, a and b, and returns their sum.
-2. Write test cases using Jest to check the function's output for different input values, including positive, negative, and zero values.
-3. Use Jest's test and expect functions to define the test cases and check the function's output.
+1. Write test cases using Jest to check the function's output for different input values, including positive, negative, and zero values.
+2. Use Jest's test and expect functions to define the test cases and to check the functions output.
+3. Write a function called add that takes two arguments, a and b, and returns their sum.
 
 ## Hints
 
