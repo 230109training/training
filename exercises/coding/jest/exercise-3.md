@@ -5,13 +5,19 @@
 This exercise involves using Jest's async/await functionality to test a function called `fetchData`. The code that will be tested has been provided for you.
 
 ```javascript
-function fetchData() {
+function fetchData(value, shouldReject) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('Data fetched successfully!');
+      if (shouldReject) {
+        reject(new Error(`${value}`));
+      } else {
+        resolve(value);
+      }
     }, 1000);
   });
 }
+
+module.exports = fetchData;
 ```
 
 ## Approach
