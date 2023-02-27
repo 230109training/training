@@ -12,9 +12,9 @@ This exercise involves using Jest's matchers to test a function called `isPositi
 
 ## Hints
 
-1. Use Jest's matchers, such as toBe and not, to check the output of the isPositive function.
+1. Use Jest's matchers, such as `toBe` and `not`, to check the output of the `isPositive` function.
 2. Write test cases to check the function's behavior when passed positive, negative, and zero input numbers.
-3. Use Jest's expect function to chain multiple matchers together.
+3. Use Jest's `expect` function to chain multiple matchers together.
 
 ## Deliverables
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-This exercise involves writing basic test cases using Jest to ensure that a function called add works correctly for different input values.
+This exercise involves writing basic test cases using Jest to ensure that a function called `add` works correctly for different input values.
 
 ## Approach
 
@@ -12,7 +12,7 @@ This exercise involves writing basic test cases using Jest to ensure that a func
 
 ## Hints
 
-1. Use Jest's matchers, such as toBe and not, to check the output of the add function.
+1. Use Jest's matchers, such as `toBe` and `not`, to check the output of the `add` function.
 2. Write test cases to check the function's behavior when passed positive, negative, and zero input numbers.
 3. Remember to test for edge cases, such as when the input is the largest or smallest possible number for a given data type.
 

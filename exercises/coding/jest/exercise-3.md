@@ -16,13 +16,13 @@ function fetchData() {
 
 ## Approach
 
-1. Use Jest's async/await functionality to write test cases that verify that the fetchData function works correctly when the Promise resolves or rejects.
+1. Use Jest's async/await functionality to write test cases that verify that the `fetchData` function works correctly when the Promise resolves or rejects.
 
 ## Hints
 
-1. Use Jest's async and await keywords to handle the Promise returned by the fetchData function.
+1. Use Jest's async and await keywords to handle the Promise returned by the `fetchData` function.
 2. Write test cases to check the function's behavior when the Promise resolves and rejects.
-3. Use Jest's expect function to check the output of the fetchData function.
+3. Use Jest's `expect` function to check the output of the fetchData function.
 
 ## Deliverables
 

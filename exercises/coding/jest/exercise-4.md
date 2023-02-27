@@ -19,14 +19,14 @@ function getData() {
 
 ## Approach
 
-1. Use Jest's mocking functionality to mock the axios module and test the behavior of the getData function when the HTTP request succeeds or fails.
-2. Write test cases using Jest to verify that the getData function works correctly for different HTTP response codes.
+1. Use Jest's mocking functionality to mock the axios module and test the behavior of the `getData` function when the HTTP request succeeds or fails.
+2. Write test cases using Jest to verify that the `getData` function works correctly for different HTTP response codes.
 
 ## Hints
 
-1. Use Jest's jest.mock function to mock the axios module.
-2. Write test cases to ensure that the getData function returns the expected output when the mocked axios module resolves or rejects the HTTP request.
-3. Use Jest's expect function to check the output of the getData function.
+1. Use Jest's `jest.mock` function to mock the axios module.
+2. Write test cases to ensure that the `getData` function returns the expected output when the mocked axios module resolves or rejects the HTTP request.
+3. Use Jest's expect function to check the output of the `getData` function.
 
 ## Deliverables
 
