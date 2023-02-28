@@ -1,0 +1,47 @@
+Transform:
+- AWS::Serverless-2016-10-31
+
+Resources:
+  AddPost:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: add-post/
+      Handler: app.handler
+      Runtime: nodejs16.x
+      Events:
+        AddPost:
+          Type: Api
+          Properties:
+            Path: /posts
+            Method: post
+      Environment:
+        Variables:
+          POSTS_TABLE_NAME: !Ref PostsTable
+          POSTS_BUCKET_NAME: !Ref PostImagesBucket
+      Policies:
+        - Statement:
+            Effect: Allow
+            Action:
+             - dynamodb:PutItem
+            Resource: !GetAtt PostsTable.Arn
+        - S3WritePolicy:
+            BucketName: !Ref PostImagesBucket
+  
+  PostsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: post_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: post_id
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+
+  PostImagesBucket:
+    Type: AWS::S3::Bucket
+
+Outputs:
+  EndpointUrl:
+    Description: Endpoint for API Gateway
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
